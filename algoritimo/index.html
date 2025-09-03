@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Sankofa+Display&display=swap" rel="stylesheet">
+    <title>Adição ou Subtração</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+
+<body>
+    <h1>Adição ou Subtração</h1>
+    <form action="./pags/adição.php" method="get">
+        <div>
+            <label for="numero">numero desejado a somar</label>
+            <input type="number" name="numero" id="numero">
+        </div>
+        <label for="conta">Qual conta fazer :</label><br>
+        <input type="radio" id="conta" name="conta" value="Adição">
+        <label for="Corinthians">Adição</label><br>
+        <input type="radio" id="conta" name="conta" value="Subtração">
+        <label for="Palmeiras">Subtração</label><br>
+
+        <input type="submit" value="calcular">
+    </form>
+
+</body>
+
+</html>

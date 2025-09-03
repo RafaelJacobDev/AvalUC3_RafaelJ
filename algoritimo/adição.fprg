@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="adi&#231;&#227;o"/>
+        <attribute name="authors" value="rafael.jtgrangeiro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-03 04:17:46 "/>
+        <attribute name="created" value="cmFmYWVsLmp0Z3JhbmdlaXJvO1NBTjA3MTc0NjNXMTEtMTsyMDI1LTA5LTAzOyIwMzoyMToyMCAiOzM4OTg="/>
+        <attribute name="edited" value="cmFmYWVsLmp0Z3JhbmdlaXJvO1NBTjA3MTc0NjNXMTEtMTsyMDI1LTA5LTAzOyIwNDoxNzo0NiAiOzE7NDAyMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero, contador, conta, resultado" type="Integer" array="False" size=""/>
+            <assign variable="contador" expression="0"/>
+            <output expression="&quot;Qual numero deseja somar at&#233; 10 ?&quot;" newline="True"/>
+            <input variable="numero"/>
+            <output expression="&quot;gostaria de fazer uma conta de subitra&#231;&#227;o digite 1 ou de adi&#231;&#227;o digite 2?&quot;" newline="True"/>
+            <input variable="conta"/>
+            <if expression="conta=2">
+                <then>
+                    <while expression="contador&lt;=10">
+                        <assign variable="resultado" expression="numero+contador"/>
+                        <output expression="numero &amp; &quot;+&quot; &amp; contador &amp; &quot; = &quot; &amp; resultado" newline="True"/>
+                        <assign variable="contador" expression="contador+1"/>
+                    </while>
+                </then>
+                <else>
+                    <while expression="contador&lt;=10">
+                        <assign variable="resultado" expression="numero-contador"/>
+                        <output expression="numero &amp; &quot;-&quot; &amp; contador &amp; &quot; = &quot; &amp; resultado" newline="True"/>
+                        <assign variable="contador" expression="contador+1"/>
+                    </while>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

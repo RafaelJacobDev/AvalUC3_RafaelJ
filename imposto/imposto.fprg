@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="imposto"/>
+        <attribute name="authors" value="rafael.jtgrangeiro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-03 02:15:59 "/>
+        <attribute name="created" value="cmFmYWVsLmp0Z3JhbmdlaXJvO1NBTjA3MTc0NjNXMTEtMTsyMDI1LTA5LTAzOyIwMjowMjo0NiAiOzM5MDQ="/>
+        <attribute name="edited" value="cmFmYWVsLmp0Z3JhbmdlaXJvO1NBTjA3MTc0NjNXMTEtMTsyMDI1LTA5LTAzOyIwMjoxNTo1OSAiOzE7NDAyMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="horasReal, horasTrabalhadas, impostoPago, valorMensal, valorCimposto" type="Real" array="False" size=""/>
+            <output expression="&quot;Quanto voc&#234; recebe na hora trabalhada?&quot;" newline="True"/>
+            <input variable="horasReal"/>
+            <output expression="&quot;quantas horas voc&#234; trabalha no m&#234;s ?&quot;" newline="True"/>
+            <input variable="horasTrabalhadas"/>
+            <assign variable="valorMensal" expression="horasReal * horasTrabalhadas"/>
+            <if expression="valorMensal&gt;1999.99">
+                <then>
+                    <assign variable="impostoPago" expression="valorMensal*0.05"/>
+                    <assign variable="valorCimposto" expression="valorMensal - impostoPago"/>
+                    <output expression="&quot;Voc&#234; ira receber &quot; &amp; valorCimposto &amp; &quot; a quantia paga de imposto foi &quot; &amp; impostoPago" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Vo&#234; recebe &quot; &amp; valorMensal &amp; &quot; o seu imposto &#233; 0.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
