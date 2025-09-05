@@ -11,19 +11,16 @@ $resultado2 = $numero2 % 2;
 $resultado3 = $numero3 % 2;
 
 $resultados = [$resultado1, $resultado2, $resultado3];
+for ($i = 0; $i < count($resultados); $i++)
 
-if ($resultado1 == 0 || $resultado2 == 0 || $resultado3 == 0) {
-
-    for ($i = 0; $i < count($resultados); $i++) {
+    if ($resultados[$i] == 0) {
         $par = $par + 1;
-    }
-} elseif ($resultado1 != 0 || $resultado2 != 0 || $resultado3 != 0) {
-    for ($i = 0; $i < count($resultados); $i++) {
+    } else {
         $impar = $impar + 1;
     }
-}
 
-$mensagem = "Tem ".$par." numeros pares e ".$impar." numeros impar.";
+
+$mensagem = "Tem " . $par . " numeros pares e " . $impar . " numeros impar.";
 
 ?>
 
